@@ -1,0 +1,1010 @@
+[
+  {
+    "section_name": "4STSW7",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.0407119,
+    "midlon": -114.0714812
+  },
+  {
+    "section_name": "17AVSW10",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0378168,
+    "midlon": -114.0861788
+  },
+  {
+    "section_name": "4STSW6",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.042139,
+    "midlon": -114.0714807
+  },
+  {
+    "section_name": "12AVS11",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0414622,
+    "midlon": -114.0645478
+  },
+  {
+    "section_name": "12AVS12",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0413921,
+    "midlon": -114.0620815
+  },
+  {
+    "section_name": "12AVS13",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.0413227,
+    "midlon": -114.0596368
+  },
+  {
+    "section_name": "12AVS2",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0422708,
+    "midlon": -114.0932695
+  },
+  {
+    "section_name": "12AVS3",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0421825,
+    "midlon": -114.0901481
+  },
+  {
+    "section_name": "12AVS4",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0421128,
+    "midlon": -114.0876796
+  },
+  {
+    "section_name": "12AVS5",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0420089,
+    "midlon": -114.0839832
+  },
+  {
+    "section_name": "12AVS6",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0418344,
+    "midlon": -114.0778488
+  },
+  {
+    "section_name": "12AVS8",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.041698,
+    "midlon": -114.0728716
+  },
+  {
+    "section_name": "12AVS9",
+    "collection": "Intersection",
+    "volume": 13000.0,
+    "midlat": 51.0416134,
+    "midlon": -114.0698719
+  },
+  {
+    "section_name": "14STNW12",
+    "collection": "Segment",
+    "volume": 46000.0,
+    "midlat": 51.0469932,
+    "midlon": -114.0946737
+  },
+  {
+    "section_name": "14STNW12A",
+    "collection": "Intersection",
+    "volume": 36000.0,
+    "midlat": 51.0450015,
+    "midlon": -114.0946408
+  },
+  {
+    "section_name": "14STNW13",
+    "collection": "Intersection",
+    "volume": 31000.0,
+    "midlat": 51.0436382,
+    "midlon": -114.0946141
+  },
+  {
+    "section_name": "14STNW14",
+    "collection": "Intersection",
+    "volume": 25000.0,
+    "midlat": 51.0427853,
+    "midlon": -114.0945941
+  },
+  {
+    "section_name": "14STNW15A",
+    "collection": "Intersection",
+    "volume": 24000.0,
+    "midlat": 51.0417426,
+    "midlon": -114.0946639
+  },
+  {
+    "section_name": "14STNW15D",
+    "collection": "Intersection",
+    "volume": 22000.0,
+    "midlat": 51.0390579,
+    "midlon": -114.094702
+  },
+  {
+    "section_name": "10STW5",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0514053,
+    "midlon": -114.0852094
+  },
+  {
+    "section_name": "11AVS10",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0424962,
+    "midlon": -114.0669606
+  },
+  {
+    "section_name": "11AVS11",
+    "collection": "Intersection",
+    "volume": 13000.0,
+    "midlat": 51.0424257,
+    "midlon": -114.0644779
+  },
+  {
+    "section_name": "11AVS12",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0423556,
+    "midlon": -114.0620116
+  },
+  {
+    "section_name": "11AVS13",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0422861,
+    "midlon": -114.0595668
+  },
+  {
+    "section_name": "11AVS2",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0432393,
+    "midlon": -114.093603
+  },
+  {
+    "section_name": "11AVS3",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0431465,
+    "midlon": -114.09008
+  },
+  {
+    "section_name": "11AVS4",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0430425,
+    "midlon": -114.0863795
+  },
+  {
+    "section_name": "11AVS5",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0429387,
+    "midlon": -114.0826857
+  },
+  {
+    "section_name": "11AVS6",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0428359,
+    "midlon": -114.0789964
+  },
+  {
+    "section_name": "11AVS7",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0427322,
+    "midlon": -114.0753041
+  },
+  {
+    "section_name": "11AVS8",
+    "collection": "Intersection",
+    "volume": 15000.0,
+    "midlat": 51.0426609,
+    "midlon": -114.0727798
+  },
+  {
+    "section_name": "11AVS9",
+    "collection": "Intersection",
+    "volume": 16000.0,
+    "midlat": 51.0425779,
+    "midlon": -114.0698368
+  },
+  {
+    "section_name": "12AVS10",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0415328,
+    "midlon": -114.0670304
+  },
+  {
+    "section_name": "17AVSW12",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0378194,
+    "midlon": -114.0769346
+  },
+  {
+    "section_name": "17AVSW14",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0378303,
+    "midlon": -114.0728357
+  },
+  {
+    "section_name": "17AVSW15",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0378309,
+    "midlon": -114.0700079
+  },
+  {
+    "section_name": "17AVSW16",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0378315,
+    "midlon": -114.0672988
+  },
+  {
+    "section_name": "17AVSW17",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0378322,
+    "midlon": -114.0635812
+  },
+  {
+    "section_name": "17AVSW18",
+    "collection": "Intersection",
+    "volume": 4000.0,
+    "midlat": 51.0378328,
+    "midlon": -114.0598903
+  },
+  {
+    "section_name": "17AVSW8",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0378215,
+    "midlon": -114.0917489
+  },
+  {
+    "section_name": "1STE10",
+    "collection": "Intersection",
+    "volume": 25000.0,
+    "midlat": 51.0395195,
+    "midlon": -114.0609988
+  },
+  {
+    "section_name": "1STE2",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0487502,
+    "midlon": -114.0603364
+  },
+  {
+    "section_name": "1STE3",
+    "collection": "Intersection",
+    "volume": 21000.0,
+    "midlat": 51.0478477,
+    "midlon": -114.0604007
+  },
+  {
+    "section_name": "1STE4",
+    "collection": "Intersection",
+    "volume": 21000.0,
+    "midlat": 51.0459533,
+    "midlon": -114.0605359
+  },
+  {
+    "section_name": "1STE6",
+    "collection": "Intersection",
+    "volume": 27000.0,
+    "midlat": 51.043898,
+    "midlon": -114.0606828
+  },
+  {
+    "section_name": "1STE7",
+    "collection": "Intersection",
+    "volume": 23000.0,
+    "midlat": 51.0427831,
+    "midlon": -114.0607641
+  },
+  {
+    "section_name": "1STE8",
+    "collection": "Intersection",
+    "volume": 20000.0,
+    "midlat": 51.0418393,
+    "midlon": -114.0608304
+  },
+  {
+    "section_name": "4AVS10",
+    "collection": "Intersection",
+    "volume": 24000.0,
+    "midlat": 51.0493642,
+    "midlon": -114.063983
+  },
+  {
+    "section_name": "4AVS11",
+    "collection": "Intersection",
+    "volume": 26000.0,
+    "midlat": 51.0492943,
+    "midlon": -114.0615164
+  },
+  {
+    "section_name": "4AVS12",
+    "collection": "Intersection",
+    "volume": 40000.0,
+    "midlat": 51.0492249,
+    "midlon": -114.0590709
+  },
+  {
+    "section_name": "4AVS13",
+    "collection": "Intersection",
+    "volume": 38000.0,
+    "midlat": 51.0491411,
+    "midlon": -114.0560549
+  },
+  {
+    "section_name": "4AVS15(E)",
+    "collection": "Segment",
+    "volume": 29000.0,
+    "midlat": 51.0498485,
+    "midlon": -114.0529252
+  },
+  {
+    "section_name": "4AVS15(W)",
+    "collection": "Intersection",
+    "volume": 13000.0,
+    "midlat": 51.0501684,
+    "midlon": -114.0521411
+  },
+  {
+    "section_name": "4AVS2",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0498782,
+    "midlon": -114.0822917
+  },
+  {
+    "section_name": "4AVS3",
+    "collection": "Intersection",
+    "volume": 20000.0,
+    "midlat": 51.0497775,
+    "midlon": -114.0785227
+  },
+  {
+    "section_name": "4AVS5",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0496694,
+    "midlon": -114.0747944
+  },
+  {
+    "section_name": "4AVS6",
+    "collection": "Intersection",
+    "volume": 25000.0,
+    "midlat": 51.0495995,
+    "midlon": -114.0718758
+  },
+  {
+    "section_name": "4AVS8",
+    "collection": "Intersection",
+    "volume": 25000.0,
+    "midlat": 51.0495027,
+    "midlon": -114.0689412
+  },
+  {
+    "section_name": "4AVS9",
+    "collection": "Intersection",
+    "volume": 24000.0,
+    "midlat": 51.0494349,
+    "midlon": -114.0664583
+  },
+  {
+    "section_name": "4AVSWCON",
+    "collection": "Segment",
+    "volume": 11000.0,
+    "midlat": 51.0481183,
+    "midlon": -114.0910309
+  },
+  {
+    "section_name": "4STSW1",
+    "collection": "Intersection",
+    "volume": 5000.0,
+    "midlat": 51.0492335,
+    "midlon": -114.0714953
+  },
+  {
+    "section_name": "4STSW2",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.0481597,
+    "midlon": -114.071479
+  },
+  {
+    "section_name": "4STSW3",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0468558,
+    "midlon": -114.0714794
+  },
+  {
+    "section_name": "4STSW4",
+    "collection": "Segment",
+    "volume": 11000.0,
+    "midlat": 51.0446306,
+    "midlon": -114.071473
+  },
+  {
+    "section_name": "4STSW5",
+    "collection": "Intersection",
+    "volume": 8000.0,
+    "midlat": 51.0430881,
+    "midlon": -114.071491
+  },
+  {
+    "section_name": "4STSW8",
+    "collection": "Intersection",
+    "volume": 8000.0,
+    "midlat": 51.0388056,
+    "midlon": -114.0714831
+  },
+  {
+    "section_name": "5AVS1A",
+    "collection": "Intersection",
+    "volume": 4000.0,
+    "midlat": 51.0487313,
+    "midlon": -114.0879191
+  },
+  {
+    "section_name": "5AVS10",
+    "collection": "Segment",
+    "volume": 20000.0,
+    "midlat": 51.0484238,
+    "midlon": -114.06405
+  },
+  {
+    "section_name": "5AVS11",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0483539,
+    "midlon": -114.0615834
+  },
+  {
+    "section_name": "5AVS12",
+    "collection": "Intersection",
+    "volume": 17000.0,
+    "midlat": 51.0482845,
+    "midlon": -114.0591377
+  },
+  {
+    "section_name": "5AVS13",
+    "collection": "Intersection",
+    "volume": 30000.0,
+    "midlat": 51.048203,
+    "midlon": -114.0564466
+  },
+  {
+    "section_name": "5AVS14",
+    "collection": "Perm",
+    "volume": 35000.0,
+    "midlat": 51.0487205,
+    "midlon": -114.0527956
+  },
+  {
+    "section_name": "5AVS2",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.048945,
+    "midlon": -114.0824357
+  },
+  {
+    "section_name": "5AVS3",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.0488673,
+    "midlon": -114.0798238
+  },
+  {
+    "section_name": "5AVS4",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.0487983,
+    "midlon": -114.0773525
+  },
+  {
+    "section_name": "5AVS5",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0487295,
+    "midlon": -114.074893
+  },
+  {
+    "section_name": "5AVS6",
+    "collection": "Intersection",
+    "volume": 14000.0,
+    "midlat": 51.0486647,
+    "midlon": -114.0725786
+  },
+  {
+    "section_name": "5AVS7",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0486159,
+    "midlon": -114.0708134
+  },
+  {
+    "section_name": "5AVS8",
+    "collection": "Segment",
+    "volume": 18000.0,
+    "midlat": 51.0485599,
+    "midlon": -114.0688553
+  },
+  {
+    "section_name": "5AVS9",
+    "collection": "Segment",
+    "volume": 19000.0,
+    "midlat": 51.0484941,
+    "midlon": -114.066533
+  },
+  {
+    "section_name": "6AVS1",
+    "collection": "Intersection",
+    "volume": 20000.0,
+    "midlat": 51.0480999,
+    "midlon": -114.0861314
+  },
+  {
+    "section_name": "6AVS10",
+    "collection": "Segment",
+    "volume": 14000.0,
+    "midlat": 51.047558,
+    "midlon": -114.066591
+  },
+  {
+    "section_name": "6AVS11",
+    "collection": "Segment",
+    "volume": 12000.0,
+    "midlat": 51.04748,
+    "midlon": -114.0639248
+  },
+  {
+    "section_name": "6AVS12",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0474105,
+    "midlon": -114.0616507
+  },
+  {
+    "section_name": "6AVS13",
+    "collection": "Intersection",
+    "volume": 13000.0,
+    "midlat": 51.0473411,
+    "midlon": -114.0592051
+  },
+  {
+    "section_name": "6AVS3",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0479959,
+    "midlon": -114.0824082
+  },
+  {
+    "section_name": "6AVS4",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0478878,
+    "midlon": -114.078621
+  },
+  {
+    "section_name": "6AVS6",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0477867,
+    "midlon": -114.0749606
+  },
+  {
+    "section_name": "6AVS7",
+    "collection": "Intersection",
+    "volume": 20000.0,
+    "midlat": 51.0477204,
+    "midlon": -114.0726125
+  },
+  {
+    "section_name": "6AVS8",
+    "collection": "Segment",
+    "volume": 16000.0,
+    "midlat": 51.0476667,
+    "midlon": -114.0708628
+  },
+  {
+    "section_name": "6AVS9",
+    "collection": "Segment",
+    "volume": 15000.0,
+    "midlat": 51.0476143,
+    "midlon": -114.0690717
+  },
+  {
+    "section_name": "8STW1C",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.0484314,
+    "midlon": -114.0810839
+  },
+  {
+    "section_name": "8STW1D",
+    "collection": "Intersection",
+    "volume": 7000.0,
+    "midlat": 51.0493798,
+    "midlon": -114.0810362
+  },
+  {
+    "section_name": "9AVS1",
+    "collection": "Intersection",
+    "volume": 36000.0,
+    "midlat": 51.0454564,
+    "midlon": -114.0920091
+  },
+  {
+    "section_name": "9AVS11",
+    "collection": "Intersection",
+    "volume": 21000.0,
+    "midlat": 51.0447357,
+    "midlon": -114.0680092
+  },
+  {
+    "section_name": "9AVS12",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0446451,
+    "midlon": -114.0643196
+  },
+  {
+    "section_name": "9AVS13",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0445752,
+    "midlon": -114.0618531
+  },
+  {
+    "section_name": "9AVS14",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0445059,
+    "midlon": -114.0594077
+  },
+  {
+    "section_name": "9AVS15",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0444084,
+    "midlon": -114.0556931
+  },
+  {
+    "section_name": "9AVS19",
+    "collection": "Segment",
+    "volume": 14000.0,
+    "midlat": 51.0437617,
+    "midlon": -114.0439767
+  },
+  {
+    "section_name": "9AVS2",
+    "collection": "Intersection",
+    "volume": 30000.0,
+    "midlat": 51.0453008,
+    "midlon": -114.0874731
+  },
+  {
+    "section_name": "9AVS3",
+    "collection": "Intersection",
+    "volume": 29000.0,
+    "midlat": 51.0452304,
+    "midlon": -114.08499
+  },
+  {
+    "section_name": "9AVS5",
+    "collection": "Intersection",
+    "volume": 31000.0,
+    "midlat": 51.0451412,
+    "midlon": -114.0819545
+  },
+  {
+    "section_name": "9AVS6",
+    "collection": "Intersection",
+    "volume": 33000.0,
+    "midlat": 51.0450331,
+    "midlon": -114.0783113
+  },
+  {
+    "section_name": "9AVS7",
+    "collection": "Intersection",
+    "volume": 29000.0,
+    "midlat": 51.0449353,
+    "midlon": -114.0749525
+  },
+  {
+    "section_name": "9AVS8",
+    "collection": "Intersection",
+    "volume": 25000.0,
+    "midlat": 51.044848,
+    "midlon": -114.0721879
+  },
+  {
+    "section_name": "BOW10",
+    "collection": "Intersection",
+    "volume": 23000.0,
+    "midlat": 51.0475478,
+    "midlon": -114.0923174
+  },
+  {
+    "section_name": "CENTRE11",
+    "collection": "Intersection",
+    "volume": 16000.0,
+    "midlat": 51.050709,
+    "midlon": -114.062697
+  },
+  {
+    "section_name": "MACLEOD2",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0477127,
+    "midlon": -114.0579441
+  },
+  {
+    "section_name": "MACLEOD2A",
+    "collection": "Intersection",
+    "volume": 5000.0,
+    "midlat": 51.0487198,
+    "midlon": -114.0578749
+  },
+  {
+    "section_name": "MACLEOD3",
+    "collection": "Intersection",
+    "volume": 23000.0,
+    "midlat": 51.0457265,
+    "midlon": -114.0580898
+  },
+  {
+    "section_name": "MACLEOD4",
+    "collection": "Intersection",
+    "volume": 23000.0,
+    "midlat": 51.0438283,
+    "midlon": -114.0582244
+  },
+  {
+    "section_name": "MACLEOD5",
+    "collection": "Intersection",
+    "volume": 21000.0,
+    "midlat": 51.042714,
+    "midlon": -114.0583024
+  },
+  {
+    "section_name": "MACLEOD6",
+    "collection": "Intersection",
+    "volume": 24000.0,
+    "midlat": 51.0417695,
+    "midlon": -114.0583732
+  },
+  {
+    "section_name": "MACLEOD7",
+    "collection": "Intersection",
+    "volume": 19000.0,
+    "midlat": 51.0408167,
+    "midlon": -114.0584425
+  },
+  {
+    "section_name": "MACLEOD8",
+    "collection": "Intersection",
+    "volume": 18000.0,
+    "midlat": 51.0390065,
+    "midlon": -114.058574
+  },
+  {
+    "section_name": "5AVS1",
+    "collection": "Intersection",
+    "volume": 7000.0,
+    "midlat": 51.0489959,
+    "midlon": -114.0844316
+  },
+  {
+    "section_name": "MEMOR10",
+    "collection": "Intersection",
+    "volume": 29000.0,
+    "midlat": 51.0501789,
+    "midlon": -114.0921907
+  },
+  {
+    "section_name": "MEMOR8C",
+    "collection": "Segment",
+    "volume": 88000.0,
+    "midlat": 51.0489005,
+    "midlon": -114.0417775
+  },
+  {
+    "section_name": "MEMOR9",
+    "collection": "Intersection",
+    "volume": 27000.0,
+    "midlat": 51.0556556,
+    "midlon": -114.0725495
+  },
+  {
+    "section_name": "MEMOR9A",
+    "collection": "Intersection",
+    "volume": 30000.0,
+    "midlat": 51.0521707,
+    "midlon": -114.0569143
+  },
+  {
+    "section_name": "5STW10",
+    "collection": "Intersection",
+    "volume": 8000.0,
+    "midlat": 51.0384991,
+    "midlon": -114.0742992
+  },
+  {
+    "section_name": "5STW2",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.049166,
+    "midlon": -114.0736327
+  },
+  {
+    "section_name": "5STW3",
+    "collection": "Intersection",
+    "volume": 8000.0,
+    "midlat": 51.0482212,
+    "midlon": -114.0737097
+  },
+  {
+    "section_name": "5STW4",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0468019,
+    "midlon": -114.0738057
+  },
+  {
+    "section_name": "5STW5",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.0452851,
+    "midlon": -114.0738577
+  },
+  {
+    "section_name": "5STW6",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0440597,
+    "midlon": -114.073925
+  },
+  {
+    "section_name": "5STW7",
+    "collection": "Intersection",
+    "volume": 12000.0,
+    "midlat": 51.0431596,
+    "midlon": -114.0740449
+  },
+  {
+    "section_name": "5STW8",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0422114,
+    "midlon": -114.0741141
+  },
+  {
+    "section_name": "5STW9",
+    "collection": "Intersection",
+    "volume": 9000.0,
+    "midlat": 51.0407868,
+    "midlon": -114.0742118
+  },
+  {
+    "section_name": "8STW2",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0470098,
+    "midlon": -114.0811864
+  },
+  {
+    "section_name": "8STW3",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.045075,
+    "midlon": -114.0812724
+  },
+  {
+    "section_name": "8STW4",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.043366,
+    "midlon": -114.0814216
+  },
+  {
+    "section_name": "8STW5",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0424186,
+    "midlon": -114.0814941
+  },
+  {
+    "section_name": "8STW6",
+    "collection": "Intersection",
+    "volume": 11000.0,
+    "midlat": 51.0409946,
+    "midlon": -114.0815904
+  },
+  {
+    "section_name": "8STW7",
+    "collection": "Intersection",
+    "volume": 10000.0,
+    "midlat": 51.0388848,
+    "midlon": -114.0817292
+  },
+  {
+    "section_name": "16AV/TCH10",
+    "collection": "Segment",
+    "volume": 45000.0,
+    "midlat": 51.0669749,
+    "midlon": -114.0696589
+  },
+  {
+    "section_name": "16AV/TCH10B",
+    "collection": "Segment",
+    "volume": 44000.0,
+    "midlat": 51.0669767,
+    "midlon": -114.0651459
+  },
+  {
+    "section_name": "16AV/TCH11",
+    "collection": "Segment",
+    "volume": 42000.0,
+    "midlat": 51.0669776,
+    "midlon": -114.0611969
+  },
+  {
+    "section_name": "16AV/TCH11B",
+    "collection": "Segment",
+    "volume": 42000.0,
+    "midlat": 51.0669801,
+    "midlon": -114.0579001
+  },
+  {
+    "section_name": "16AV/TCH12",
+    "collection": "Segment",
+    "volume": 43000.0,
+    "midlat": 51.0669848,
+    "midlon": -114.051694
+  },
+  {
+    "section_name": "16AV/TCH7",
+    "collection": "Segment",
+    "volume": 40000.0,
+    "midlat": 51.0670133,
+    "midlon": -114.0997062
+  },
+  {
+    "section_name": "16AV/TCH8",
+    "collection": "Segment",
+    "volume": 43000.0,
+    "midlat": 51.0669848,
+    "midlon": -114.0888492
+  },
+  {
+    "section_name": "16AV/TCH9",
+    "collection": "Segment",
+    "volume": 50000.0,
+    "midlat": 51.0669722,
+    "midlon": -114.0749131
+  }
+]
