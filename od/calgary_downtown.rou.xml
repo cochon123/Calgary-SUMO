@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-06-22 22:07:43 by Eclipse SUMO marouter Version 1.18.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/marouterConfiguration.xsd">
+
+    <input>
+        <net-file value="calgary_downtown.net.xml"/>
+        <additional-files value="od/taz.add.xml"/>
+        <tazrelation-files value="od/od_matrix.tazrelation.xml"/>
+    </input>
+
+    <output>
+        <output-file value="od/calgary_downtown.rou.xml"/>
+        <netload-output value="od/edge_loads.xml"/>
+    </output>
+
+    <processing>
+        <assignment-method value="UE"/>
+        <max-iterations value="20"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+    </report>
+
+</configuration>

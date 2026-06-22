@@ -1,0 +1,98 @@
+{
+  "taz_0_0": {
+    "n_edges": 5487,
+    "aadt_sum": 309000.0,
+    "production": 5562,
+    "attraction": 5562,
+    "centroid_lat": 51.039424,
+    "centroid_lon": -114.09238
+  },
+  "taz_0_1": {
+    "n_edges": 5293,
+    "aadt_sum": 435000.0,
+    "production": 7830,
+    "attraction": 7830,
+    "centroid_lat": 51.039113,
+    "centroid_lon": -114.077688
+  },
+  "taz_0_2": {
+    "n_edges": 4769,
+    "aadt_sum": 491000.0,
+    "production": 8838,
+    "attraction": 8838,
+    "centroid_lat": 51.039206,
+    "centroid_lon": -114.062463
+  },
+  "taz_0_3": {
+    "n_edges": 2761,
+    "aadt_sum": 14000.0,
+    "production": 252,
+    "attraction": 252,
+    "centroid_lat": 51.039411,
+    "centroid_lon": -114.047349
+  },
+  "taz_1_0": {
+    "n_edges": 3148,
+    "aadt_sum": 133000.0,
+    "production": 2394,
+    "attraction": 2394,
+    "centroid_lat": 51.05463,
+    "centroid_lon": -114.091207
+  },
+  "taz_1_1": {
+    "n_edges": 3614,
+    "aadt_sum": 376000.0,
+    "production": 6768,
+    "attraction": 6768,
+    "centroid_lat": 51.05267,
+    "centroid_lon": -114.0775
+  },
+  "taz_1_2": {
+    "n_edges": 3332,
+    "aadt_sum": 474000.0,
+    "production": 8532,
+    "attraction": 8532,
+    "centroid_lat": 51.053871,
+    "centroid_lon": -114.062119
+  },
+  "taz_1_3": {
+    "n_edges": 3696,
+    "aadt_sum": 165000.0,
+    "production": 2970,
+    "attraction": 2970,
+    "centroid_lat": 51.054103,
+    "centroid_lon": -114.047818
+  },
+  "taz_2_0": {
+    "n_edges": 2873,
+    "aadt_sum": 83000.0,
+    "production": 1494,
+    "attraction": 1494,
+    "centroid_lat": 51.068635,
+    "centroid_lon": -114.092663
+  },
+  "taz_2_1": {
+    "n_edges": 2760,
+    "aadt_sum": 50000.0,
+    "production": 900,
+    "attraction": 900,
+    "centroid_lat": 51.071089,
+    "centroid_lon": -114.077315
+  },
+  "taz_2_2": {
+    "n_edges": 3327,
+    "aadt_sum": 173000.0,
+    "production": 3114,
+    "attraction": 3114,
+    "centroid_lat": 51.071122,
+    "centroid_lon": -114.062342
+  },
+  "taz_2_3": {
+    "n_edges": 1670,
+    "aadt_sum": 43000.0,
+    "production": 774,
+    "attraction": 774,
+    "centroid_lat": 51.069784,
+    "centroid_lon": -114.048889
+  }
+}

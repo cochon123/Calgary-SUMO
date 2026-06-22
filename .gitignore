@@ -10,3 +10,15 @@ output/randomTrips.log
 __pycache__/
 *.pyc
 .DS_Store
+
+# OD calibration intermediate route files (large, reproducible)
+od/iter_*_routes.xml
+od/iter_*_trips.xml
+od/calgary_od.rou.xml
+od/calgary_ue.rou.xml
+od/od_trips.xml
+od/*.alt.xml
+od/od_trips.trips.xml
+od/edge_loads.xml
+od/calgary_downtown.rou.xml
+od/calgary_od.rou.alt.xml
