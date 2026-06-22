@@ -1,0 +1,12 @@
+# === Large generated artifacts (exceed GitHub 100MB limit, reproducible) ===
+calgary.net.xml
+calgary.poly.xml
+calgary_downtown.net.xml
+osm/*.osm.gz
+osm/*.osm.pbf
+
+# === Logs / temp ===
+output/randomTrips.log
+__pycache__/
+*.pyc
+.DS_Store

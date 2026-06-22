@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <input>
+    <net-file value="calgary.net.xml"/>
+    <route-files value="output/calgary.rou.xml"/>
+    <additional-files value="calgary.poly.xml"/>
+  </input>
+  <time>
+    <begin value="0"/>
+    <end value="120"/>
+    <step-length value="1"/>
+  </time>
+  <processing>
+    <time-to-teleport value="-1"/>
+  </processing>
+  <routing>
+    <routing-algorithm value="dijkstra"/>
+  </routing>
+</configuration>
