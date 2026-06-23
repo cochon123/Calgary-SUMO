@@ -35,6 +35,52 @@ AADT serves as a **calibration constraint**, not a demand source.
 05_calibrate.py           → 5-iteration gradient calibration loop
 ```
 
+## External TAZ Pipeline
+
+The extended pipeline adds boundary zones for traffic that enters, leaves, or
+passes through downtown. This addresses the closed-system limitation of the
+12-zone internal model, which under-loads corridors whose demand originates
+outside the downtown cutout.
+
+```
+01a_external_taz.py           → Find passenger boundary edges and create ext_* TAZs
+02a_gravity_model_extended.py → Combine internal/external zones, add EI/IE/EE flows
+03c_generate_trips_extended.py→ Generate trips from both internal and external TAZs
+04a_compare_extended.py       → Compare extended routes to AADT observations
+05a_calibrate_extended.py     → Run 5 calibration iterations on the extended matrix
+```
+
+External zones are detected from edges near the downtown bbox that connect to
+low-degree cut nodes. Edges are grouped by compass sector (`ext_N`, `ext_S`,
+`ext_E`, `ext_W`, and diagonals when supported). Each external zone uses its
+boundary edges as SUMO `tazSource` and `tazSink` entries, weighted by matched
+AADT where available.
+
+Demand is estimated as sector AADT times the 0.09 peak-hour factor, split
+50/50 between inbound production and outbound attraction. The extended gravity
+model keeps the existing `exp(-0.5 * d)` deterrence function, balances the
+full matrix with Furness/IPF, and seeds external-external through trips at 30%
+of external production toward opposite sectors.
+
+Run from the repository root:
+
+```bash
+export SUMO_HOME=/usr/share/sumo
+python3 od/01a_external_taz.py
+python3 od/02a_gravity_model_extended.py
+python3 od/03c_generate_trips_extended.py
+/usr/share/sumo/bin/duarouter -n calgary_downtown.net.xml \
+  -r od/od_trips_extended.xml -o od/calgary_od_extended.rou.xml \
+  --ignore-errors --no-step-log --no-warnings --routing-algorithm dijkstra
+python3 od/04a_compare_extended.py
+python3 od/05a_calibrate_extended.py
+```
+
+Extended outputs are written separately as `od/taz_external.add.xml`,
+`od/external_zones.json`, `od/od_matrix_extended.json`,
+`od/od_trips_extended.xml`, `od/calgary_od_extended.rou.xml`, and calibrated
+`od/od_matrix_extended_calibrated.json` artifacts.
+
 ## Results
 
 | Metric | Iter 1 | Iter 2 | Iter 3 | Iter 4 | Iter 5 |
