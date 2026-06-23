@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <additional>
   <taz id="ext_E">
+    <tazSource id="222970218#0" weight="88000.0"/>
+    <tazSink id="222970218#0" weight="88000.0"/>
     <tazSource id="-143323555#3" weight="1.0"/>
     <tazSink id="-143323555#3" weight="1.0"/>
     <tazSource id="-766734721#13" weight="1.0"/>
@@ -49,8 +51,6 @@
     <tazSink id="176278148#3" weight="1.0"/>
     <tazSource id="-11902190#0" weight="1.0"/>
     <tazSink id="-11902190#0" weight="1.0"/>
-    <tazSource id="1272006572#3" weight="1.0"/>
-    <tazSink id="1272006572#3" weight="1.0"/>
   </taz>
   <taz id="ext_N">
     <tazSource id="4818578#2" weight="1.0"/>

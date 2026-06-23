@@ -60,9 +60,16 @@ for i, rec in enumerate(aadt):
     best_edge = None
     for edge, dist in edges:
         eid = edge.getID()
-        if ':' not in eid:  # skip internal edges
+        if ':' not in eid and edge.allows('passenger'):
             best_edge = eid
             break
+    if best_edge is None:
+        # Fallback: closest non-internal edge regardless of permissions
+        for edge, dist in edges:
+            eid = edge.getID()
+            if ':' not in eid:
+                best_edge = eid
+                break
     if best_edge is None:
         best_edge = edges[0][0].getID()
 

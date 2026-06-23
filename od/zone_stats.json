@@ -33,9 +33,9 @@
   },
   "taz_1_0": {
     "n_edges": 3148,
-    "aadt_sum": 133000.0,
-    "production": 2394,
-    "attraction": 2394,
+    "aadt_sum": 122000.0,
+    "production": 2196,
+    "attraction": 2196,
     "centroid_lat": 51.05463,
     "centroid_lon": -114.091207
   },

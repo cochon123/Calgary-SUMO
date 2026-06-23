@@ -17,6 +17,12 @@ TAZ_FILES = ["od/taz_simple.add.xml", "od/taz_external.add.xml"]
 MAX_ITERATIONS = 5
 PHF = 0.09
 SIM_END = 3600
+MEMORIAL_EDGES = [
+    ("-24962865#2", "MEMOR8C"),
+    ("292896517", "MEMOR9A"),
+    ("-171068183", "MEMOR10"),
+    ("149621572#2", "MEMOR9"),
+]
 random.seed(42)
 
 
@@ -134,6 +140,17 @@ T = [[float(v) for v in row] for row in matrix["T"]]
 N = len(zones)
 taz_edges = load_taz_edges()
 
+PRE_SCALE = 0.585
+FLOOR_EW = 4000.0
+FLOOR_WE = 4000.0
+idx_E = zones.index("ext_E")
+idx_W = zones.index("ext_W")
+
+for i in range(N):
+    for j in range(N):
+        T[i][j] *= PRE_SCALE
+pre_scaled_target = sum(T[i][j] for i in range(N) for j in range(N) if i != j)
+
 edge_aadt_peak = {}
 with open("aadt/edge_volumes.csv", newline="") as f:
     for row in csv.DictReader(f):
@@ -144,7 +161,6 @@ for zid, edges in taz_edges.items():
     for eid, _ in edges:
         edge_to_zone[eid] = zid
 
-target_total = sum(T[i][j] for i in range(N) for j in range(N) if i != j)
 history = []
 
 print("=" * 70)
@@ -194,19 +210,19 @@ for iteration in range(MAX_ITERATIONS):
                 T[i][j] = 0.0
                 continue
             T[i][j] *= math.sqrt(zone_factors.get(zones[i], 1.0) * zone_factors.get(zones[j], 1.0))
-    # Don't normalize back to initial total — let corrections adjust the level.
-    # The initial demand estimate may be too high (ratio > 1.0) because external
-    # zone AADT estimates are inflated. Forcing normalization back to target
-    # would undo the zone-factor corrections. Instead, gently pull toward the
-    # observed level using the current ratio.
-    current_ratio = metrics["ratio"]
-    if current_ratio > 1.5:
-        # Overshooting significantly — scale everything down toward observed
-        dampen = 0.7 / current_ratio  # gradual correction, not full snap
+
+    # Normalize to the pre-scaled target while preserving relative corrections.
+    total = sum(T[i][j] for i in range(N) for j in range(N) if i != j)
+    if total > 0:
+        scale = pre_scaled_target / total
         for i in range(N):
             for j in range(N):
                 if i != j:
-                    T[i][j] *= dampen
+                    T[i][j] *= scale
+
+    # Enforce E-W through-trip floors after normalization so they cannot be scaled away.
+    T[idx_E][idx_W] = max(T[idx_E][idx_W], FLOOR_EW)
+    T[idx_W][idx_E] = max(T[idx_W][idx_E], FLOOR_WE)
 
 best = max(range(len(history)), key=lambda i: history[i]["geh5_pct"]) if history else None
 matrix["T"] = [[round(T[i][j]) for j in range(N)] for i in range(N)]
@@ -235,4 +251,11 @@ if final_routes:
     print(f"  R: {final_metrics['correlation']:.4f}")
     print(f"  Ratio: {final_metrics['ratio']:.2f}")
     print(f"  Routes: {final_routes}")
+
+    print("\nMemorial Drive edge volumes:")
+    print(f"  {'Edge':>12}  {'Name':>8}  {'Observed':>8}  {'Assigned':>8}  {'GEH':>6}")
+    for eid, name in MEMORIAL_EDGES:
+        obs = edge_aadt_peak.get(eid, 0.0)
+        asn = edge_vol.get(eid, 0)
+        print(f"  {eid:>12}  {name:>8}  {obs:>8.0f}  {asn:>8}  {geh(obs, asn):>6.2f}")
 print("Calibrated matrix: od/od_matrix_extended_calibrated.json")

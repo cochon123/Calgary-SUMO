@@ -1,11 +1,11 @@
 {
-  "edges_compared": 144,
-  "mean_observed": 1716.2,
-  "mean_assigned": 1510.8,
-  "ratio": 0.88,
-  "geh_under_5_pct": 14.6,
-  "geh_under_10_pct": 30.6,
-  "mean_geh": 23.77,
-  "rmse": 1190.0,
-  "correlation": 0.5198
+  "edges_compared": 143,
+  "mean_observed": 1721.3,
+  "mean_assigned": 811.5,
+  "ratio": 0.471,
+  "geh_under_5_pct": 7.7,
+  "geh_under_10_pct": 13.3,
+  "mean_geh": 26.9,
+  "rmse": 1196.6,
+  "correlation": 0.6585
 }

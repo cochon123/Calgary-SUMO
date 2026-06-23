@@ -41,14 +41,15 @@
   "ext_E": {
     "name": "ext_E",
     "sector": "E",
-    "centroid_lat": 51.055829,
-    "centroid_lon": -114.039973,
-    "production": 12645,
-    "attraction": 12645,
-    "total_aadt": 281000.0,
-    "measured_boundary_aadt": 0.0,
-    "estimate_method": "nearest_aadt",
+    "centroid_lat": 51.056063,
+    "centroid_lon": -114.039987,
+    "production": 3960,
+    "attraction": 3960,
+    "total_aadt": 88000.0,
+    "measured_boundary_aadt": 88000.0,
+    "estimate_method": "boundary_aadt",
     "boundary_edges": [
+      "222970218#0",
       "-143323555#3",
       "-766734721#13",
       "766734721#13",
@@ -72,8 +73,7 @@
       "-174936211#0",
       "174936211#0",
       "176278148#3",
-      "-11902190#0",
-      "1272006572#3"
+      "-11902190#0"
     ],
     "n_boundary_edges": 44
   },
@@ -82,9 +82,9 @@
     "sector": "S",
     "centroid_lat": 51.031563,
     "centroid_lon": -114.068038,
-    "production": 5625,
-    "attraction": 5625,
-    "total_aadt": 125000.0,
+    "production": 4500,
+    "attraction": 4500,
+    "total_aadt": 100000.0,
     "measured_boundary_aadt": 0.0,
     "estimate_method": "nearest_aadt",
     "boundary_edges": [
