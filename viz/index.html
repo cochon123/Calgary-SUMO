@@ -6,6 +6,7 @@
     <title>Calgary SUMO — Traffic Calibration & Optimization</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a1a2e; color: #eee; overflow: hidden; }
@@ -119,6 +120,63 @@
 
         .controls button:hover { background: #1a4a7e; }
 
+        .live-control {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            background: #0f3460;
+            color: #eee;
+            border: 1px solid #1a1a4e;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        select.live-control { cursor: pointer; }
+        button.live-control { cursor: pointer; font-weight: 600; }
+        button.live-control:hover:not(:disabled) { background: #1a4a7e; }
+        button.live-control:disabled { opacity: 0.55; cursor: not-allowed; }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: #1a1a3e;
+            border: 1px solid #0f3460;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #7f8fa6;
+        }
+
+        .status-running .status-dot { background: #2ed573; }
+        .status-completed .status-dot { background: #54a0ff; }
+        .status-error .status-dot { background: #ff6b6b; }
+
+        #perf-chart {
+            width: 100%;
+            height: 80px;
+            margin-top: 8px;
+            background: #101936;
+            border: 1px solid #0f3460;
+            border-radius: 4px;
+        }
+
+        .chart-legend {
+            display: flex;
+            gap: 12px;
+            color: #a4b0be;
+            font-size: 11px;
+            margin-top: 6px;
+        }
+
         #tooltip {
             position: absolute;
             background: rgba(15, 52, 96, 0.95);
@@ -165,6 +223,29 @@
     </div>
 
     <div class="panel">
+        <h2>Live Simulation</h2>
+        <select id="plan-select" class="live-control">
+            <option value="baseline">baseline</option>
+            <option value="green_wave_ns">green_wave_ns</option>
+            <option value="random_offsets">random_offsets</option>
+        </select>
+        <button id="start-live" class="live-control">Start Live Simulation</button>
+        <div class="metric-row">
+            <span class="metric-label">Sim Status</span>
+            <span id="sim-status" class="status-pill status-idle"><span class="status-dot"></span><span id="sim-status-text">idle</span></span>
+        </div>
+        <div class="metric-row"><span class="metric-label">Step</span><span id="sim-step" class="metric-value">0</span></div>
+        <div class="metric-row"><span class="metric-label">Vehicles</span><span id="sim-vehicles" class="metric-value">0</span></div>
+        <div class="metric-row"><span class="metric-label">Mean speed</span><span id="sim-speed" class="metric-value">0.0 m/s</span></div>
+        <div class="metric-row"><span class="metric-label">Completed</span><span id="sim-completed" class="metric-value">0</span></div>
+        <svg id="perf-chart" viewBox="0 0 200 80" preserveAspectRatio="none">
+            <path id="speed-line" d="" fill="none" stroke="#2196F3" stroke-width="2"></path>
+            <path id="completed-line" d="" fill="none" stroke="#4CAF50" stroke-width="2"></path>
+        </svg>
+        <div class="chart-legend"><span style="color:#2196F3">mean_speed</span><span style="color:#4CAF50">completed</span></div>
+    </div>
+
+    <div class="panel">
         <h2>Legend — Edge Volume</h2>
         <div class="legend">
             <div class="legend-item"><div class="legend-swatch" style="background:#1a1a4e"></div> No traffic (0 veh)</div>
@@ -198,6 +279,10 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
 
 let currentColorMode = 'volume';
 let layers = { edges: null, aadt: null, tls: null };
+let edgeLayersById = {};
+let tlsLayersById = {};
+let liveHistory = [];
+let socket = null;
 
 // --- Color scales ---
 function volumeColor(vol) {
@@ -206,6 +291,30 @@ function volumeColor(vol) {
     if (vol < 500) return '#2ed573';
     if (vol < 1500) return '#ffa502';
     return '#ff6b6b';
+}
+
+function liveEdgeColor(count) {
+    if (count === 0) return '#1a1a3e';
+    if (count <= 50) return '#2196F3';
+    if (count <= 200) return '#4CAF50';
+    if (count <= 500) return '#FF9800';
+    return '#f44336';
+}
+
+function liveEdgeWidth(count) {
+    if (count === 0) return 2;
+    if (count <= 50) return 3;
+    if (count <= 200) return 4;
+    if (count <= 500) return 5;
+    return 7;
+}
+
+function tlsPhaseColor(phase) {
+    if (phase === 0) return '#4CAF50';
+    if (phase === 1) return '#FFC107';
+    if (phase === 2) return '#00BCD4';
+    if (phase === 3) return '#FF9800';
+    return '#9E9E9E';
 }
 
 function volumeWidth(vol) {
@@ -241,6 +350,7 @@ async function loadAll() {
         }),
         onEachFeature: (feature, lyr) => {
             const p = feature.properties;
+            edgeLayersById[p.id] = lyr;
             let popup = `<b>${p.section || p.id.slice(0, 20)}</b><br>`;
             popup += `Edge: <code>${p.id}</code><br>`;
             popup += `Type: ${p.type}<br>`;
@@ -298,11 +408,106 @@ async function loadAll() {
                 weight: 0.5,
                 fillOpacity: 0.6,
             });
+        },
+        onEachFeature: (feature, lyr) => {
+            tlsLayersById[feature.properties.id] = lyr;
         }
     }).addTo(map);
 
     // Populate sidebar metrics
     populateMetrics(metricsRes);
+}
+
+function setupLiveSocket() {
+    if (typeof io === 'undefined') {
+        setLiveStatus('error', 0);
+        return;
+    }
+
+    socket = io();
+    socket.on('connect', () => console.log('Socket.IO connected'));
+    socket.on('sim_status', state => setLiveStatus(state.status, state.step || 0));
+    socket.on('sim_update', updateLiveSimulation);
+    socket.on('sim_end', payload => {
+        setLiveStatus('completed', payload?.metrics?.step || 3600);
+        document.getElementById('start-live').disabled = false;
+    });
+    socket.on('sim_error', payload => {
+        console.error('Simulation error:', payload?.message || payload);
+        setLiveStatus('error', Number(document.getElementById('sim-step').textContent) || 0);
+        document.getElementById('start-live').disabled = false;
+    });
+
+    document.getElementById('start-live').addEventListener('click', () => {
+        liveHistory = [];
+        redrawChart();
+        setLiveStatus('running', 0);
+        document.getElementById('start-live').disabled = true;
+        socket.emit('start_simulation', { plan: document.getElementById('plan-select').value });
+    });
+}
+
+function setLiveStatus(status, step) {
+    const el = document.getElementById('sim-status');
+    const text = document.getElementById('sim-status-text');
+    el.className = `status-pill status-${status || 'idle'}`;
+    text.textContent = status || 'idle';
+    document.getElementById('sim-step').textContent = step || 0;
+    if (status !== 'running') document.getElementById('start-live').disabled = false;
+}
+
+function updateLiveSimulation(payload) {
+    setLiveStatus('running', payload.step);
+    document.getElementById('sim-vehicles').textContent = payload.metrics.total_vehicles;
+    document.getElementById('sim-speed').textContent = `${payload.metrics.mean_speed.toFixed(1)} m/s`;
+    document.getElementById('sim-completed').textContent = payload.metrics.completed;
+
+    for (const [edgeId, count] of Object.entries(payload.edges)) {
+        const layer = edgeLayersById[edgeId];
+        if (!layer) continue;
+        layer.setStyle({
+            color: liveEdgeColor(count),
+            weight: liveEdgeWidth(count),
+            opacity: 0.9,
+        });
+    }
+
+    for (const [tlsId, phase] of Object.entries(payload.tls)) {
+        const layer = tlsLayersById[tlsId];
+        if (!layer) continue;
+        layer.setStyle({
+            fillColor: tlsPhaseColor(phase),
+            color: '#fff',
+            weight: 2,
+            fillOpacity: 1,
+            radius: 8,
+        });
+    }
+
+    liveHistory.push({
+        step: payload.step,
+        mean_speed: payload.metrics.mean_speed,
+        completed: payload.metrics.completed,
+    });
+    if (liveHistory.length > 120) liveHistory.shift();
+    redrawChart();
+}
+
+function redrawChart() {
+    const speedPath = document.getElementById('speed-line');
+    const completedPath = document.getElementById('completed-line');
+    speedPath.setAttribute('d', chartPath(liveHistory.map(p => p.mean_speed)));
+    completedPath.setAttribute('d', chartPath(liveHistory.map(p => p.completed)));
+}
+
+function chartPath(values) {
+    if (values.length < 2) return '';
+    const max = Math.max(...values, 1);
+    return values.map((value, index) => {
+        const x = (index / (values.length - 1)) * 200;
+        const y = 74 - (value / max) * 68;
+        return `${index === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
 }
 
 function populateMetrics(data) {
@@ -372,7 +577,7 @@ function colorMode() {
     });
 }
 
-loadAll();
+loadAll().then(setupLiveSocket);
 </script>
 
 </body>
