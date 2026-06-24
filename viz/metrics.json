@@ -1,0 +1,65 @@
+{
+  "calibration": {
+    "edges_compared": 143,
+    "mean_observed": 1721.3,
+    "mean_assigned": 811.5,
+    "ratio": 0.471,
+    "geh_under_5_pct": 7.7,
+    "geh_under_10_pct": 13.3,
+    "mean_geh": 26.9,
+    "rmse": 1196.6,
+    "correlation": 0.6585
+  },
+  "traci": {
+    "baseline": {
+      "n_trips": 98,
+      "n_completed": 98,
+      "avg_duration": 159.9591836734694,
+      "avg_wait": 36.63265306122449,
+      "avg_time_loss": 61.09357142857143,
+      "total_wait": 3590.0,
+      "median_duration": 149.0,
+      "n_tls_vehicles": 84
+    },
+    "ns_favor": {
+      "n_trips": 103,
+      "n_completed": 103,
+      "avg_duration": 162.62135922330097,
+      "avg_wait": 35.85436893203884,
+      "avg_time_loss": 61.06087378640777,
+      "total_wait": 3693.0,
+      "median_duration": 154.0,
+      "n_tls_vehicles": 86
+    },
+    "ew_favor": {
+      "n_trips": 96,
+      "n_completed": 96,
+      "avg_duration": 155.73958333333334,
+      "avg_wait": 36.916666666666664,
+      "avg_time_loss": 60.1203125,
+      "total_wait": 3544.0,
+      "median_duration": 146.0,
+      "n_tls_vehicles": 86
+    },
+    "balanced_60": {
+      "n_trips": 105,
+      "n_completed": 105,
+      "avg_duration": 160.85714285714286,
+      "avg_wait": 35.77142857142857,
+      "avg_time_loss": 60.14771428571429,
+      "total_wait": 3756.0,
+      "median_duration": 146.0,
+      "n_tls_vehicles": 86
+    },
+    "long_green": {
+      "n_trips": 100,
+      "n_completed": 100,
+      "avg_duration": 158.8,
+      "avg_wait": 36.23,
+      "avg_time_loss": 59.7782,
+      "total_wait": 3623.0,
+      "median_duration": 147.5,
+      "n_tls_vehicles": 87
+    }
+  }
+}

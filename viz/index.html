@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calgary SUMO — Traffic Calibration & Optimization</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a1a2e; color: #eee; overflow: hidden; }
+
+        #map {
+            position: absolute;
+            top: 0; left: 0;
+            width: calc(100% - 340px);
+            height: 100%;
+            z-index: 1;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0; right: 0;
+            width: 340px;
+            height: 100%;
+            background: #16213e;
+            border-left: 1px solid #0f3460;
+            overflow-y: auto;
+            z-index: 2;
+            padding: 0;
+        }
+
+        #sidebar h1 {
+            font-size: 18px;
+            padding: 16px 20px;
+            background: #0f3460;
+            border-bottom: 1px solid #1a1a4e;
+        }
+
+        .panel {
+            padding: 14px 20px;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7f8fa6;
+            margin-bottom: 8px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 13px;
+        }
+
+        .metric-label { color: #a4b0be; }
+        .metric-value { font-weight: 600; font-family: 'Courier New', monospace; }
+        .metric-good { color: #2ed573; }
+        .metric-bad { color: #ff6b6b; }
+        .metric-warn { color: #ffa502; }
+
+        .traci-table {
+            width: 100%;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+            border-collapse: collapse;
+        }
+
+        .traci-table th {
+            text-align: left;
+            color: #7f8fa6;
+            padding: 4px 6px;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .traci-table td {
+            padding: 4px 6px;
+            border-bottom: 1px solid #1a1a3e;
+        }
+
+        .legend {
+            font-size: 11px;
+            color: #a4b0be;
+            line-height: 1.6;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 3px 0;
+        }
+
+        .legend-swatch {
+            width: 18px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .controls {
+            padding: 12px 20px;
+        }
+
+        .controls button {
+            width: 100%;
+            padding: 8px;
+            background: #0f3460;
+            color: #eee;
+            border: 1px solid #1a1a4e;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .controls button:hover { background: #1a4a7e; }
+
+        #tooltip {
+            position: absolute;
+            background: rgba(15, 52, 96, 0.95);
+            border: 1px solid #1a4a7e;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+            max-width: 260px;
+        }
+
+        #tooltip .tt-title { font-weight: 700; margin-bottom: 4px; color: #54a0ff; }
+        #tooltip .tt-row { display: flex; gap: 8px; justify-content: space-between; }
+
+        .leaflet-popup-content-wrapper {
+            background: #16213e;
+            color: #eee;
+            border: 1px solid #0f3460;
+            border-radius: 8px;
+        }
+        .leaflet-popup-tip { background: #16213e; }
+        .leaflet-popup-content { margin: 10px 14px; font-size: 12px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="tooltip"></div>
+
+<div id="sidebar">
+    <h1>🚦 Calgary SUMO Downtown</h1>
+
+    <div class="panel">
+        <h2>Calibration Metrics</h2>
+        <div id="calibration-metrics"></div>
+    </div>
+
+    <div class="panel">
+        <h2>TraCI Optimization Results</h2>
+        <div id="traci-results"></div>
+    </div>
+
+    <div class="panel">
+        <h2>Legend — Edge Volume</h2>
+        <div class="legend">
+            <div class="legend-item"><div class="legend-swatch" style="background:#1a1a4e"></div> No traffic (0 veh)</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#3742fa"></div> Low (&lt;100 veh)</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#2ed573"></div> Moderate (100-500)</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#ffa502"></div> High (500-1500)</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#ff6b6b"></div> Very High (&gt;1500)</div>
+            <hr style="margin:6px 0;border-color:#0f3460">
+            <div class="legend-item"><div class="legend-swatch" style="background:#feca57;width:10px;height:10px;border-radius:50%"></div> AADT observation point</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#54a0ff;width:10px;height:10px;border-radius:50%"></div> Traffic signal</div>
+            <div class="legend-item"><div class="legend-swatch" style="background:#ff4757;width:12px;height:12px;border-radius:50%"></div> Optimized TLS</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="toggleLayer('edges')">Toggle Edge Volumes</button>
+        <button onclick="toggleLayer('aadt')">Toggle AADT Points</button>
+        <button onclick="toggleLayer('tls')">Toggle Signals</button>
+        <button onclick="colorMode()">Toggle: Volume / GEH</button>
+    </div>
+</div>
+
+<script>
+const map = L.map('map').setView([51.050, -114.070], 14);
+
+// Dark tile layer
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap, &copy; CartoDB',
+    maxZoom: 19
+}).addTo(map);
+
+let currentColorMode = 'volume';
+let layers = { edges: null, aadt: null, tls: null };
+
+// --- Color scales ---
+function volumeColor(vol) {
+    if (vol === 0) return '#1a1a4e';
+    if (vol < 100) return '#3742fa';
+    if (vol < 500) return '#2ed573';
+    if (vol < 1500) return '#ffa502';
+    return '#ff6b6b';
+}
+
+function volumeWidth(vol) {
+    if (vol === 0) return 1;
+    if (vol < 100) return 1.5;
+    if (vol < 500) return 2.5;
+    if (vol < 1500) return 4;
+    return 6;
+}
+
+function gehColor(geh) {
+    if (geh < 5) return '#2ed573';    // Good
+    if (geh < 10) return '#ffa502';   // Acceptable
+    if (geh < 30) return '#ff6b6b';   // Poor
+    return '#ff4757';                  // Bad
+}
+
+// --- Load layers ---
+async function loadAll() {
+    const [edgesRes, aadtRes, tlsRes, metricsRes] = await Promise.all([
+        fetch('/geojson/edges.geojson').then(r => r.json()),
+        fetch('/geojson/aadt_points.geojson').then(r => r.json()),
+        fetch('/geojson/tls_points.geojson').then(r => r.json()),
+        fetch('/api/metrics').then(r => r.json()),
+    ]);
+
+    // Edges
+    layers.edges = L.geoJSON(edgesRes, {
+        style: f => ({
+            color: volumeColor(f.properties.volume),
+            weight: volumeWidth(f.properties.volume),
+            opacity: 0.7,
+        }),
+        onEachFeature: (feature, lyr) => {
+            const p = feature.properties;
+            let popup = `<b>${p.section || p.id.slice(0, 20)}</b><br>`;
+            popup += `Edge: <code>${p.id}</code><br>`;
+            popup += `Type: ${p.type}<br>`;
+            if (p.aadt > 0) {
+                popup += `AADT: ${p.aadt.toLocaleString()}<br>`;
+                popup += `Peak hr: ${p.aadt_peak}<br>`;
+            }
+            popup += `<b>Simulated: ${p.volume} veh</b><br>`;
+            lyr.bindPopup(popup);
+        }
+    }).addTo(map);
+
+    // AADT points
+    layers.aadt = L.geoJSON(aadtRes, {
+        pointToLayer: (f, latlng) => {
+            const p = f.properties;
+            return L.circleMarker(latlng, {
+                radius: Math.min(Math.sqrt(p.aadt / 1000) * 2, 8),
+                fillColor: gehColor(p.geh),
+                color: '#feca57',
+                weight: 1.5,
+                fillOpacity: 0.8,
+            });
+        },
+        onEachFeature: (feature, lyr) => {
+            const p = feature.properties;
+            let popup = `<b>${p.section}</b><br>`;
+            popup += `Edge: <code>${p.edge}</code><br>`;
+            popup += `AADT: ${p.aadt.toLocaleString()} veh/day<br>`;
+            popup += `Peak hour (obs): ${p.peak_hour}<br>`;
+            popup += `Simulated: ${p.assigned}<br>`;
+            popup += `<b>GEH: ${p.geh}</b> `;
+            popup += p.geh < 5 ? '(good)' : p.geh < 10 ? '(acceptable)' : '(poor)';
+            lyr.bindPopup(popup);
+        }
+    }).addTo(map);
+
+    // TLS points
+    layers.tls = L.geoJSON(tlsRes, {
+        pointToLayer: (f, latlng) => {
+            const p = f.properties;
+            if (p.is_optimized) {
+                return L.circleMarker(latlng, {
+                    radius: 8,
+                    fillColor: '#ff4757',
+                    color: '#fff',
+                    weight: 2,
+                    fillOpacity: 1,
+                }).bindPopup(`<b>🎯 Optimized TLS</b><br>${p.id}`);
+            }
+            return L.circleMarker(latlng, {
+                radius: 3,
+                fillColor: '#54a0ff',
+                color: '#0f3460',
+                weight: 0.5,
+                fillOpacity: 0.6,
+            });
+        }
+    }).addTo(map);
+
+    // Populate sidebar metrics
+    populateMetrics(metricsRes);
+}
+
+function populateMetrics(data) {
+    const cal = data.calibration || {};
+    const traci = data.traci || {};
+
+    // Calibration
+    let calHtml = '';
+    const gehClass = (cal.geh_under_5_pct || 0) >= 15 ? 'metric-warn' : 'metric-bad';
+    calHtml += metricRow('Edges compared', cal.edges_compared || '—');
+    calHtml += metricRow('GEH < 5', `${cal.geh_under_5_pct || '—'}%`, gehClass);
+    calHtml += metricRow('Mean GEH', cal.mean_geh?.toFixed(1) || '—');
+    calHtml += metricRow('RMSE', cal.rmse?.toFixed(0) || '—');
+    const corrClass = (cal.correlation || 0) >= 0.5 ? 'metric-good' : 'metric-warn';
+    calHtml += metricRow('Correlation (R)', cal.correlation?.toFixed(3) || '—', corrClass);
+    calHtml += metricRow('Ratio (asn/obs)', cal.ratio?.toFixed(2) || '—');
+    document.getElementById('calibration-metrics').innerHTML = calHtml;
+
+    // TraCI results
+    let traciHtml = '<table class="traci-table"><thead><tr><th>Plan</th><th>Trips</th><th>Dur</th><th>Δ</th></tr></thead><tbody>';
+    const baseline = traci.baseline || {};
+    const baseDur = baseline.avg_duration || 0;
+    const plans = Object.entries(traci);
+    for (const [label, m] of plans) {
+        if (!m.avg_duration) continue;
+        const delta = m.avg_duration - baseDur;
+        const deltaClass = delta < -0.5 ? 'metric-good' : delta > 0.5 ? 'metric-bad' : '';
+        traciHtml += `<tr>`;
+        traciHtml += `<td>${label}</td>`;
+        traciHtml += `<td>${m.n_trips || '—'}</td>`;
+        traciHtml += `<td>${m.avg_duration.toFixed(1)}</td>`;
+        traciHtml += `<td class="${deltaClass}">${delta >= 0 ? '+' : ''}${delta.toFixed(1)}</td>`;
+        traciHtml += `</tr>`;
+    }
+    traciHtml += '</tbody></table>';
+    document.getElementById('traci-results').innerHTML = traciHtml;
+}
+
+function metricRow(label, value, cls = '') {
+    return `<div class="metric-row"><span class="metric-label">${label}</span><span class="metric-value ${cls}">${value}</span></div>`;
+}
+
+// --- Controls ---
+function toggleLayer(name) {
+    if (layers[name]) {
+        if (map.hasLayer(layers[name])) map.removeLayer(layers[name]);
+        else map.addLayer(layers[name]);
+    }
+}
+
+function colorMode() {
+    currentColorMode = currentColorMode === 'volume' ? 'geh' : 'volume';
+    if (!layers.edges) return;
+
+    layers.edges.eachLayer(lyr => {
+        const f = lyr.feature;
+        const p = f.properties;
+        if (currentColorMode === 'geh' && p.geh !== undefined) {
+            // Only AADT edges have GEH
+            lyr.setStyle({ color: gehColor(p.geh), weight: 3 });
+        } else {
+            lyr.setStyle({
+                color: volumeColor(p.volume),
+                weight: volumeWidth(p.volume),
+            });
+        }
+    });
+}
+
+loadAll();
+</script>
+
+</body>
+</html>
