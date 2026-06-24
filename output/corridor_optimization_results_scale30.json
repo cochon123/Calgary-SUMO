@@ -1,260 +1,431 @@
 {
   "corridor": {
-    "description": "east-west arterial",
-    "bearing_degrees": 80.7,
+    "description": "Macleod (N-S)",
+    "bearing_degrees": 0.0,
     "tls_ids": [
-      "cluster_1819149623_1823129290_2597911633_2597911636_#4more",
-      "cluster_12454147868_13949077688_13949078626_13949078627_#4more",
-      "cluster_2459924775_2459924779_2459924791_2459924841_#1more",
-      "cluster_4542361474_4542361475_4542361476_4542361477_#1more",
+      "cluster_2147386164_2147386204_2147386245_2147386254_#2more",
+      "cluster_11531822301_11781198996_12290427786_12297542375_#6more",
+      "cluster_11013329563_12753503082_74834882_7501944608",
+      "cluster_31027695_7501907465_7501907467_7501907470",
+      "cluster_12611800240_12611800241_2146137986_2146138002_#11more",
+      "cluster_29697379_7273446757_7273446758_7273446759_#1more",
+      "cluster_2651025160_7273446731_7273446732_7273446733_#2more",
+      "cluster_13084926444_13084926445_13084926450_13084926451_#6more",
+      "2160011261",
+      "604131963",
+      "cluster_2160011242_506808729",
+      "604131982",
+      "2160011224",
+      "cluster_29312109_4542360249_4542360250_4542360251_#1more",
       "cluster_31062807_4542360253_4542360254_4542360255_#1more",
-      "7495546483",
-      "9463820838"
+      "cluster_30727620_6311428931_6311428932_6311428934_#1more"
     ],
     "members": [
       {
-        "id": "cluster_1819149623_1823129290_2597911633_2597911636_#4more",
-        "load_score": 5289,
+        "id": "cluster_2147386164_2147386204_2147386245_2147386254_#2more",
         "coordinates": [
-          -114.094299,
-          51.044218
+          -114.059285,
+          51.030523
         ],
-        "n_edges": 8,
+        "load_score": 32,
+        "road_name": "Macleod Trail S",
+        "n_edges": 5,
         "controlled_edges": [
           {
-            "id": "-203406153#7",
+            "id": "480200991",
             "volume": 0
           },
           {
-            "id": "-248402410#2",
-            "volume": 143
+            "id": "460895702",
+            "volume": 8
           },
           {
-            "id": "1320669945",
-            "volume": 688
+            "id": "1488054732#2",
+            "volume": 16
           },
           {
-            "id": "1349096472#1",
-            "volume": 2244
+            "id": "210015162#0",
+            "volume": 4
           },
           {
-            "id": "203406153#6",
-            "volume": 0
-          },
-          {
-            "id": "248402400#2",
-            "volume": 1583
-          },
-          {
-            "id": "248402410#1",
-            "volume": 211
-          },
-          {
-            "id": "46695164#1",
-            "volume": 420
+            "id": "464665352#0",
+            "volume": 4
           }
         ],
         "order": 1,
-        "line_offset_m": 0.0,
         "distance_from_previous_m": 0.0
       },
       {
-        "id": "cluster_12454147868_13949077688_13949078626_13949078627_#4more",
-        "load_score": 4601,
+        "id": "cluster_11531822301_11781198996_12290427786_12297542375_#6more",
         "coordinates": [
-          -114.088835,
-          51.045449
+          -114.058417,
+          51.037852
         ],
-        "n_edges": 10,
-        "controlled_edges": [
-          {
-            "id": "-198464171#2",
-            "volume": 292
-          },
-          {
-            "id": "-203406179#7",
-            "volume": 200
-          },
-          {
-            "id": "1530510954#0",
-            "volume": 0
-          },
-          {
-            "id": "1530510954#1",
-            "volume": 0
-          },
-          {
-            "id": "1530510968#0",
-            "volume": 0
-          },
-          {
-            "id": "1530510969#0",
-            "volume": 0
-          },
-          {
-            "id": "166187513#1",
-            "volume": 1343
-          },
-          {
-            "id": "166187515#2",
-            "volume": 1823
-          },
-          {
-            "id": "198464171#1",
-            "volume": 443
-          },
-          {
-            "id": "203406179#6",
-            "volume": 500
-          }
-        ],
-        "order": 2,
-        "line_offset_m": 72.5,
-        "distance_from_previous_m": 405.8
-      },
-      {
-        "id": "cluster_2459924775_2459924779_2459924791_2459924841_#1more",
-        "load_score": 4502,
-        "coordinates": [
-          -114.062926,
-          51.047635
-        ],
+        "load_score": 130,
+        "road_name": "Macleod Trail SE",
         "n_edges": 6,
         "controlled_edges": [
           {
-            "id": "-32547888#4",
-            "volume": 1217
+            "id": "1426707222#0",
+            "volume": 0
           },
           {
-            "id": "-468684738#2",
-            "volume": 1016
+            "id": "1424736337#0",
+            "volume": 0
           },
           {
-            "id": "140445177#3",
-            "volume": 874
+            "id": "-1424736337#1",
+            "volume": 0
           },
           {
-            "id": "24836134#1",
-            "volume": 676
+            "id": "-1268332928#2",
+            "volume": 105
           },
           {
-            "id": "32547888#3",
-            "volume": 361
+            "id": "46786654#5",
+            "volume": 15
           },
           {
-            "id": "468684738#1",
-            "volume": 358
+            "id": "1265901843#4",
+            "volume": 10
+          }
+        ],
+        "order": 2,
+        "distance_from_previous_m": 346.0
+      },
+      {
+        "id": "cluster_11013329563_12753503082_74834882_7501944608",
+        "coordinates": [
+          -114.058604,
+          51.039011
+        ],
+        "load_score": 388,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
+        "controlled_edges": [
+          {
+            "id": "-12100761#2",
+            "volume": 82
+          },
+          {
+            "id": "1463656916#0",
+            "volume": 306
           }
         ],
         "order": 3,
-        "line_offset_m": 15.5,
-        "distance_from_previous_m": 1827.5
+        "distance_from_previous_m": 56.5
       },
       {
-        "id": "cluster_4542361474_4542361475_4542361476_4542361477_#1more",
-        "load_score": 6472,
+        "id": "cluster_31027695_7501907465_7501907467_7501907470",
         "coordinates": [
-          -114.060364,
-          51.048509
+          -114.058816,
+          51.040327
         ],
-        "n_edges": 4,
+        "load_score": 393,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
         "controlled_edges": [
           {
-            "id": "19165392#6",
-            "volume": 2094
+            "id": "1463656916#4",
+            "volume": 317
           },
           {
-            "id": "198248650#1",
-            "volume": 2365
-          },
-          {
-            "id": "198248661#1",
-            "volume": 921
-          },
-          {
-            "id": "32548081#2",
-            "volume": 1092
+            "id": "-4826656#2",
+            "volume": 76
           }
         ],
         "order": 4,
-        "line_offset_m": 82.0,
-        "distance_from_previous_m": 203.8
+        "distance_from_previous_m": 64.1
+      },
+      {
+        "id": "cluster_12611800240_12611800241_2146137986_2146138002_#11more",
+        "coordinates": [
+          -114.057969,
+          51.041335
+        ],
+        "load_score": 973,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 4,
+        "controlled_edges": [
+          {
+            "id": "198248676#2",
+            "volume": 473
+          },
+          {
+            "id": "1463656916#8",
+            "volume": 500
+          },
+          {
+            "id": "352167940#98",
+            "volume": 0
+          },
+          {
+            "id": "-352167940#104",
+            "volume": 0
+          }
+        ],
+        "order": 5,
+        "distance_from_previous_m": 104.7
+      },
+      {
+        "id": "cluster_29697379_7273446757_7273446758_7273446759_#1more",
+        "coordinates": [
+          -114.057942,
+          51.042223
+        ],
+        "load_score": 1127,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
+        "controlled_edges": [
+          {
+            "id": "173275813#5",
+            "volume": 168
+          },
+          {
+            "id": "1185630532#4",
+            "volume": 959
+          }
+        ],
+        "order": 6,
+        "distance_from_previous_m": 40.4
+      },
+      {
+        "id": "cluster_2651025160_7273446731_7273446732_7273446733_#2more",
+        "coordinates": [
+          -114.057951,
+          51.043187
+        ],
+        "load_score": 1030,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 3,
+        "controlled_edges": [
+          {
+            "id": "-259670327#2",
+            "volume": 0
+          },
+          {
+            "id": "1463656910#2",
+            "volume": 863
+          },
+          {
+            "id": "32548512#9",
+            "volume": 167
+          }
+        ],
+        "order": 7,
+        "distance_from_previous_m": 43.7
+      },
+      {
+        "id": "cluster_13084926444_13084926445_13084926450_13084926451_#6more",
+        "coordinates": [
+          -114.058029,
+          51.044924
+        ],
+        "load_score": 1314,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 5,
+        "controlled_edges": [
+          {
+            "id": "1423634229#0",
+            "volume": 0
+          },
+          {
+            "id": "254577637#0",
+            "volume": 956
+          },
+          {
+            "id": "140445175#2",
+            "volume": 358
+          },
+          {
+            "id": "358275261#4",
+            "volume": 0
+          },
+          {
+            "id": "453661354",
+            "volume": 0
+          }
+        ],
+        "order": 8,
+        "distance_from_previous_m": 79.2
+      },
+      {
+        "id": "2160011261",
+        "coordinates": [
+          -114.05809,
+          51.045987
+        ],
+        "load_score": 1207,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 1,
+        "controlled_edges": [
+          {
+            "id": "468730823#1",
+            "volume": 1207
+          }
+        ],
+        "order": 9,
+        "distance_from_previous_m": 48.7
+      },
+      {
+        "id": "604131963",
+        "coordinates": [
+          -114.058073,
+          51.046302
+        ],
+        "load_score": 1104,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
+        "controlled_edges": [
+          {
+            "id": "468730823#3",
+            "volume": 1104
+          },
+          {
+            "id": "700210837#12",
+            "volume": 0
+          }
+        ],
+        "order": 10,
+        "distance_from_previous_m": 14.4
+      },
+      {
+        "id": "cluster_2160011242_506808729",
+        "coordinates": [
+          -114.056468,
+          51.046325
+        ],
+        "load_score": 1104,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 3,
+        "controlled_edges": [
+          {
+            "id": "-200339961#0",
+            "volume": 0
+          },
+          {
+            "id": "200339962#2",
+            "volume": 0
+          },
+          {
+            "id": "468730823#4",
+            "volume": 1104
+          }
+        ],
+        "order": 11,
+        "distance_from_previous_m": 178.5
+      },
+      {
+        "id": "604131982",
+        "coordinates": [
+          -114.05807,
+          51.046384
+        ],
+        "load_score": 1104,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
+        "controlled_edges": [
+          {
+            "id": "58780696#1",
+            "volume": 0
+          },
+          {
+            "id": "135678690#0",
+            "volume": 1104
+          }
+        ],
+        "order": 12,
+        "distance_from_previous_m": 178.2
+      },
+      {
+        "id": "2160011224",
+        "coordinates": [
+          -114.058068,
+          51.04641
+        ],
+        "load_score": 1104,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 1,
+        "controlled_edges": [
+          {
+            "id": "135678690#1",
+            "volume": 1104
+          }
+        ],
+        "order": 13,
+        "distance_from_previous_m": 1.2
+      },
+      {
+        "id": "cluster_29312109_4542360249_4542360250_4542360251_#1more",
+        "coordinates": [
+          -114.057634,
+          51.047319
+        ],
+        "load_score": 1254,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
+        "controlled_edges": [
+          {
+            "id": "196471964#5",
+            "volume": 150
+          },
+          {
+            "id": "135678690#2",
+            "volume": 1104
+          }
+        ],
+        "order": 14,
+        "distance_from_previous_m": 63.5
       },
       {
         "id": "cluster_31062807_4542360253_4542360254_4542360255_#1more",
-        "load_score": 6476,
         "coordinates": [
           -114.057951,
           51.047919
         ],
-        "n_edges": 4,
+        "load_score": 3260,
+        "road_name": "Macleod Trail SE",
+        "n_edges": 2,
         "controlled_edges": [
-          {
-            "id": "1270789367#1",
-            "volume": 171
-          },
-          {
-            "id": "196550929#0",
-            "volume": 895
-          },
           {
             "id": "198248650#2",
             "volume": 2365
           },
           {
-            "id": "254287943#1",
-            "volume": 3045
+            "id": "196550929#0",
+            "volume": 895
           }
         ],
-        "order": 5,
-        "line_offset_m": 10.3,
-        "distance_from_previous_m": 181.0
+        "order": 15,
+        "distance_from_previous_m": 44.5
       },
       {
-        "id": "7495546483",
-        "load_score": 6275,
+        "id": "cluster_30727620_6311428931_6311428932_6311428934_#1more",
         "coordinates": [
-          -114.056113,
-          51.048205
+          -114.057037,
+          51.049165
         ],
+        "load_score": 1620,
+        "road_name": "Macleod Trail SE",
         "n_edges": 2,
         "controlled_edges": [
           {
-            "id": "254287943#2",
-            "volume": 3180
+            "id": "222970223#0",
+            "volume": 1449
           },
           {
-            "id": "254287943#4",
-            "volume": 3095
+            "id": "196471986#0",
+            "volume": 171
           }
         ],
-        "order": 6,
-        "line_offset_m": 0.0,
-        "distance_from_previous_m": 132.4
-      },
-      {
-        "id": "9463820838",
-        "load_score": 6136,
-        "coordinates": [
-          -114.05532,
-          51.048205
-        ],
-        "n_edges": 2,
-        "controlled_edges": [
-          {
-            "id": "11902159#0",
-            "volume": 3068
-          },
-          {
-            "id": "11902159#1",
-            "volume": 3068
-          }
-        ],
-        "order": 7,
-        "line_offset_m": 9.1,
-        "distance_from_previous_m": 55.4
+        "order": 16,
+        "distance_from_previous_m": 116.3
       }
-    ]
+    ],
+    "total_span_m": 881.2,
+    "total_load": 17144,
+    "method": "topological (edge name filter)",
+    "filter_keyword": "Macleod"
   },
   "plans": [
     {
@@ -272,13 +443,22 @@
       "ew_green": 27,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 0,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 0,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 0,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 0,
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 0,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 0,
+        "cluster_11013329563_12753503082_74834882_7501944608": 0,
+        "cluster_31027695_7501907465_7501907467_7501907470": 0,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 0,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 0,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 0,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 0,
+        "2160011261": 0,
+        "604131963": 0,
+        "cluster_2160011242_506808729": 0,
+        "604131982": 0,
+        "2160011224": 0,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 0,
         "cluster_31062807_4542360253_4542360254_4542360255_#1more": 0,
-        "7495546483": 0,
-        "9463820838": 0
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 0
       }
     },
     {
@@ -288,13 +468,22 @@
       "ew_green": 42,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 0,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 0,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 0,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 0,
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 0,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 0,
+        "cluster_11013329563_12753503082_74834882_7501944608": 0,
+        "cluster_31027695_7501907465_7501907467_7501907470": 0,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 0,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 0,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 0,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 0,
+        "2160011261": 0,
+        "604131963": 0,
+        "cluster_2160011242_506808729": 0,
+        "604131982": 0,
+        "2160011224": 0,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 0,
         "cluster_31062807_4542360253_4542360254_4542360255_#1more": 0,
-        "7495546483": 0,
-        "9463820838": 0
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 0
       }
     },
     {
@@ -304,13 +493,22 @@
       "ew_green": 24,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 0.0,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 28.98360887854492,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 159.5163689405109,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 174.0710034696414,
-        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 186.9987469964978,
-        "7495546483": 196.45317997565763,
-        "9463820838": 200.4127709326133
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 0.0,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 58.37176593615708,
+        "cluster_11013329563_12753503082_74834882_7501944608": 67.62437120406881,
+        "cluster_31027695_7501907465_7501907467_7501907470": 78.13017949172124,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 87.1849357708459,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 94.23915985033139,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 101.8958567084341,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 115.6974673891474,
+        "2160011261": 124.14583224914328,
+        "604131963": 126.64915778650982,
+        "cluster_2160011242_506808729": 134.6656190494359,
+        "604131982": 142.67872523761866,
+        "2160011224": 142.8854714440516,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 150.4234288229811,
+        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 155.44492252653836,
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 166.3428749301426
       }
     },
     {
@@ -320,13 +518,22 @@
       "ew_green": 45,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 0.0,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 28.98360887854492,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 159.5163689405109,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 174.0710034696414,
-        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 186.9987469964978,
-        "7495546483": 196.45317997565763,
-        "9463820838": 200.4127709326133
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 0.0,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 58.37176593615708,
+        "cluster_11013329563_12753503082_74834882_7501944608": 67.62437120406881,
+        "cluster_31027695_7501907465_7501907467_7501907470": 78.13017949172124,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 87.1849357708459,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 94.23915985033139,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 101.8958567084341,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 115.6974673891474,
+        "2160011261": 124.14583224914328,
+        "604131963": 126.64915778650982,
+        "cluster_2160011242_506808729": 134.6656190494359,
+        "604131982": 142.67872523761866,
+        "2160011224": 142.8854714440516,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 150.4234288229811,
+        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 155.44492252653836,
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 166.3428749301426
       }
     },
     {
@@ -336,13 +543,22 @@
       "ew_green": 24,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 0.0,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 24.346231457977733,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 133.99374991002915,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 146.21964291449876,
-        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 157.07894747705814,
-        "7495546483": 165.0206711795524,
-        "9463820838": 168.34672758339516
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 0.0,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 49.032283386371944,
+        "cluster_11013329563_12753503082_74834882_7501944608": 56.8044718114178,
+        "cluster_31027695_7501907465_7501907467_7501907470": 65.62935077304583,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 73.23534604751055,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 79.16089427427836,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 85.59251963508464,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 97.18587260688382,
+        "2160011261": 104.28249908928035,
+        "604131963": 106.38529254066825,
+        "cluster_2160011242_506808729": 113.11912000152616,
+        "604131982": 119.85012919959966,
+        "2160011224": 120.02379601300335,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 126.3556802113041,
+        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 130.5737349222922,
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 139.72801494131977
       }
     },
     {
@@ -352,13 +568,22 @@
       "ew_green": 24,
       "yellow": 3,
       "offsets": {
-        "cluster_1819149623_1823129290_2597911633_2597911636_#4more": 47.95700988434128,
-        "cluster_12454147868_13949077688_13949078626_13949078627_#4more": 1.87580664170002,
-        "cluster_2459924775_2459924779_2459924791_2459924841_#1more": 20.627198877683945,
-        "cluster_4542361474_4542361475_4542361476_4542361477_#1more": 16.740805361161705,
-        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 55.23534106230093,
-        "7495546483": 50.752461556718345,
-        "9463820838": 66.9134675778634
+        "cluster_2147386164_2147386204_2147386245_2147386254_#2more": 47.95700988434128,
+        "cluster_11531822301_11781198996_12290427786_12297542375_#6more": 1.87580664170002,
+        "cluster_11013329563_12753503082_74834882_7501944608": 20.627198877683945,
+        "cluster_31027695_7501907465_7501907467_7501907470": 16.740805361161705,
+        "cluster_12611800240_12611800241_2146137986_2146138002_#11more": 55.23534106230093,
+        "cluster_29697379_7273446757_7273446758_7273446759_#1more": 50.752461556718345,
+        "cluster_2651025160_7273446731_7273446732_7273446733_#2more": 66.9134675778634,
+        "cluster_13084926444_13084926445_13084926450_13084926451_#6more": 6.520412447206211,
+        "2160011261": 31.644136476395282,
+        "604131963": 2.234791457855276,
+        "cluster_2160011242_506808729": 16.397848110270253,
+        "604131982": 37.90164660775218,
+        "2160011224": 1.9901977262897719,
+        "cluster_29312109_4542360249_4542360250_4542360251_#1more": 14.912823801498638,
+        "cluster_31062807_4542360253_4542360254_4542360255_#1more": 48.74133283346424,
+        "cluster_30727620_6311428931_6311428932_6311428934_#1more": 40.87061104524125
       }
     }
   ],
@@ -371,158 +596,158 @@
       "avg_time_loss": 63.96675675675676,
       "total_wait": 1520.0,
       "median_duration": 143.0,
-      "corridor_n_vehicles": 11,
-      "corridor_observed_vehicles": 91,
-      "corridor_avg_duration": 164.1818181818182,
-      "corridor_avg_wait": 47.45454545454545,
-      "corridor_avg_time_loss": 68.75909090909092,
+      "corridor_n_vehicles": 9,
+      "corridor_observed_vehicles": 70,
+      "corridor_avg_duration": 160.88888888888889,
+      "corridor_avg_wait": 39.888888888888886,
+      "corridor_avg_time_loss": 62.83888888888889,
       "total_waiting_time": 1520.0,
-      "applied_tls": 7,
+      "applied_tls": 16,
       "skipped_tls": [],
       "warnings": []
     },
     "uniform_short": {
       "n_trips": 38,
       "n_completed": 38,
-      "avg_duration": 167.0,
-      "avg_wait": 39.39473684210526,
-      "avg_time_loss": 61.98315789473684,
-      "total_wait": 1497.0,
-      "median_duration": 140.5,
-      "corridor_n_vehicles": 12,
-      "corridor_observed_vehicles": 91,
-      "corridor_avg_duration": 163.33333333333334,
-      "corridor_avg_wait": 42.083333333333336,
-      "corridor_avg_time_loss": 62.11333333333334,
-      "total_waiting_time": 1497.0,
-      "applied_tls": 5,
+      "avg_duration": 166.8421052631579,
+      "avg_wait": 39.68421052631579,
+      "avg_time_loss": 62.84710526315789,
+      "total_wait": 1508.0,
+      "median_duration": 140.0,
+      "corridor_n_vehicles": 10,
+      "corridor_observed_vehicles": 69,
+      "corridor_avg_duration": 160.5,
+      "corridor_avg_wait": 35.3,
+      "corridor_avg_time_loss": 59.184000000000005,
+      "total_waiting_time": 1508.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     },
     "uniform_long": {
-      "n_trips": 37,
-      "n_completed": 37,
-      "avg_duration": 167.0810810810811,
-      "avg_wait": 40.648648648648646,
-      "avg_time_loss": 63.696756756756756,
-      "total_wait": 1504.0,
-      "median_duration": 143.0,
-      "corridor_n_vehicles": 11,
-      "corridor_observed_vehicles": 90,
-      "corridor_avg_duration": 162.9090909090909,
-      "corridor_avg_wait": 46.09090909090909,
-      "corridor_avg_time_loss": 67.5,
-      "total_waiting_time": 1504.0,
-      "applied_tls": 5,
+      "n_trips": 36,
+      "n_completed": 36,
+      "avg_duration": 163.86111111111111,
+      "avg_wait": 38.638888888888886,
+      "avg_time_loss": 60.593333333333334,
+      "total_wait": 1391.0,
+      "median_duration": 139.5,
+      "corridor_n_vehicles": 8,
+      "corridor_observed_vehicles": 69,
+      "corridor_avg_duration": 145.875,
+      "corridor_avg_wait": 29.5,
+      "corridor_avg_time_loss": 48.77875,
+      "total_waiting_time": 1391.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     },
     "green_wave_ns": {
-      "n_trips": 37,
-      "n_completed": 37,
-      "avg_duration": 171.8108108108108,
-      "avg_wait": 44.13513513513514,
-      "avg_time_loss": 67.43297297297298,
-      "total_wait": 1633.0,
-      "median_duration": 152.0,
+      "n_trips": 39,
+      "n_completed": 39,
+      "avg_duration": 162.28205128205127,
+      "avg_wait": 35.56410256410256,
+      "avg_time_loss": 57.261538461538464,
+      "total_wait": 1387.0,
+      "median_duration": 143.0,
       "corridor_n_vehicles": 11,
-      "corridor_observed_vehicles": 90,
-      "corridor_avg_duration": 180.27272727272728,
-      "corridor_avg_wait": 58.18181818181818,
-      "corridor_avg_time_loss": 81.19545454545454,
-      "total_waiting_time": 1633.0,
-      "applied_tls": 5,
+      "corridor_observed_vehicles": 69,
+      "corridor_avg_duration": 143.1818181818182,
+      "corridor_avg_wait": 20.272727272727273,
+      "corridor_avg_time_loss": 38.43090909090909,
+      "total_waiting_time": 1387.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     },
     "green_wave_ew": {
-      "n_trips": 37,
-      "n_completed": 37,
-      "avg_duration": 169.75675675675674,
-      "avg_wait": 43.432432432432435,
-      "avg_time_loss": 66.39918918918919,
-      "total_wait": 1607.0,
-      "median_duration": 151.0,
+      "n_trips": 39,
+      "n_completed": 39,
+      "avg_duration": 167.0,
+      "avg_wait": 36.69230769230769,
+      "avg_time_loss": 60.30564102564102,
+      "total_wait": 1431.0,
+      "median_duration": 145.0,
       "corridor_n_vehicles": 11,
-      "corridor_observed_vehicles": 90,
-      "corridor_avg_duration": 173.45454545454547,
-      "corridor_avg_wait": 56.27272727272727,
-      "corridor_avg_time_loss": 77.91090909090909,
-      "total_waiting_time": 1607.0,
-      "applied_tls": 5,
+      "corridor_observed_vehicles": 70,
+      "corridor_avg_duration": 160.1818181818182,
+      "corridor_avg_wait": 24.454545454545453,
+      "corridor_avg_time_loss": 49.557272727272725,
+      "total_waiting_time": 1431.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     },
     "green_wave_ns_fast": {
-      "n_trips": 39,
-      "n_completed": 39,
-      "avg_duration": 170.15384615384616,
-      "avg_wait": 42.15384615384615,
-      "avg_time_loss": 65.04461538461538,
-      "total_wait": 1644.0,
-      "median_duration": 145.0,
-      "corridor_n_vehicles": 13,
-      "corridor_observed_vehicles": 90,
-      "corridor_avg_duration": 172.84615384615384,
-      "corridor_avg_wait": 49.84615384615385,
-      "corridor_avg_time_loss": 70.83384615384615,
-      "total_waiting_time": 1644.0,
-      "applied_tls": 5,
+      "n_trips": 35,
+      "n_completed": 35,
+      "avg_duration": 163.05714285714285,
+      "avg_wait": 36.8,
+      "avg_time_loss": 59.16885714285714,
+      "total_wait": 1288.0,
+      "median_duration": 132.0,
+      "corridor_n_vehicles": 7,
+      "corridor_observed_vehicles": 69,
+      "corridor_avg_duration": 138.57142857142858,
+      "corridor_avg_wait": 17.428571428571427,
+      "corridor_avg_time_loss": 39.26857142857143,
+      "total_waiting_time": 1288.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     },
     "random_offsets": {
-      "n_trips": 37,
-      "n_completed": 37,
-      "avg_duration": 168.8918918918919,
-      "avg_wait": 42.67567567567568,
-      "avg_time_loss": 65.55459459459459,
-      "total_wait": 1579.0,
-      "median_duration": 143.0,
-      "corridor_n_vehicles": 11,
-      "corridor_observed_vehicles": 90,
-      "corridor_avg_duration": 170.36363636363637,
-      "corridor_avg_wait": 53.18181818181818,
-      "corridor_avg_time_loss": 74.99545454545455,
-      "total_waiting_time": 1579.0,
-      "applied_tls": 5,
+      "n_trips": 38,
+      "n_completed": 38,
+      "avg_duration": 162.02631578947367,
+      "avg_wait": 37.473684210526315,
+      "avg_time_loss": 60.08552631578947,
+      "total_wait": 1424.0,
+      "median_duration": 135.0,
+      "corridor_n_vehicles": 10,
+      "corridor_observed_vehicles": 69,
+      "corridor_avg_duration": 142.6,
+      "corridor_avg_wait": 26.6,
+      "corridor_avg_time_loss": 49.241,
+      "total_waiting_time": 1424.0,
+      "applied_tls": 14,
       "skipped_tls": [
-        "7495546483",
-        "9463820838"
+        "2160011261",
+        "2160011224"
       ],
       "warnings": [
-        "7495546483: skipped (3 phases; need at least 4)",
-        "9463820838: skipped (3 phases; need at least 4)"
+        "2160011261: skipped (3 phases; need at least 4)",
+        "2160011224: skipped (3 phases; need at least 4)"
       ]
     }
   }
