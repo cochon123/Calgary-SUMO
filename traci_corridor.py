@@ -18,11 +18,16 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 NET_FILE = os.path.join(PROJECT_DIR, "calgary_downtown.net.xml")
 ROUTE_FILE = os.path.join(PROJECT_DIR, "od", "calgary_od_extended_calibrated.rou.xml")
 TOP_TLS_FILE = os.path.join(PROJECT_DIR, "output", "top_tls.json")
-RESULTS_FILE = os.path.join(PROJECT_DIR, "output", "corridor_optimization_results.json")
 SIM_STEPS = 3600
 YELLOW = 3
 RANDOM_SEED = 42
 EARTH_RADIUS_M = 6371000.0
+SCALE = float(os.environ.get("CORRIDOR_SCALE", "1.0"))
+RESULTS_FILE = os.path.join(
+    PROJECT_DIR,
+    "output",
+    f"corridor_optimization_results_scale{int(SCALE * 100)}.json",
+)
 
 
 def haversine_m(a, b):
@@ -169,6 +174,8 @@ def run_plan(plan, tls_ids):
         "0",
         "--end",
         str(SIM_STEPS),
+        "--scale",
+        str(SCALE),
         "--time-to-teleport",
         "300",
         "--max-depart-delay",
@@ -269,6 +276,7 @@ def main():
     print(f"Corridor: {corridor['description']} | bearing {corridor['bearing_degrees']} deg")
     print(f"TLS count: {len(tls_ids)}")
     print(f"Simulation steps: {SIM_STEPS}")
+    print(f"Scale: {SCALE} (≈{int(SCALE * 19000)} veh)")
     print()
 
     results = {}
